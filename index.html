@@ -1,0 +1,170 @@
+<!doctype html>
+<!-- By Vince Aquilina -->
+<html>
+  <head>
+    <title>Ten Thousand</title>
+    <meta charset="utf-8" />
+    <!-- FontAwesome kit code -->
+	  <script src="https://kit.fontawesome.com/44fb5a3ac3.js" crossorigin="anonymous"></script> 
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Major+Mono+Display&family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+  </head>
+  <body onload="game()">
+    <div class="header">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1 id="totalscore">10,000.</h1>
+    </div>
+    <div class="gamebox">
+      <div class="dice">
+        <!-- dice -->
+          <!-- fas fa-dice-six -->
+        <i id="die0" class="fas fa-square"></i>
+        <i id="die1" class="fas fa-square"></i>
+        <i id="die2" class="fas fa-square"></i>
+        <i id="die3" class="fas fa-square"></i>
+        <i id="die4" class="fas fa-square"></i>
+        <i id="die5" class="fas fa-square"></i>
+        <!-- end dice -->
+        <br />
+        <br />
+      </div>
+      <div class="controls">
+        <button id="roll" type="button" >play</button><br />
+        <button id="bank" type="button" >bank</button>
+      </div>
+    </div>
+    <div class="infoboxes">
+      <table>
+        <tr>
+          <td class="key">
+            <h2>object</h2>
+            <span>score 10,000 within 10 rounds.</span>
+            <br />
+	          <br />
+            <h2>scoring</h2>
+            <table>
+              <tr>
+                <td><strong><i class="fas fa-dice-one"></i></strong></td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td><strong><i class="fas fa-dice-five"></i></strong></td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td><strong><i class="fas fa-dice-one"></i><i class="fas fa-dice-one"></i><i class="fas fa-dice-one"></i></strong></td>
+                <td>1000</td>
+              </tr>
+              <tr>
+                <td><strong><i class="fas fa-dice-two"></i><i class="fas fa-dice-two"></i><i class="fas fa-dice-two"></i></strong></td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td><strong><i class="fas fa-dice-three"></i><i class="fas fa-dice-three"></i><i class="fas fa-dice-three"></i></strong></td>
+                <td>300</td>
+              </tr>
+              <tr>
+                <td><strong><i class="fas fa-dice-four"></i><i class="fas fa-dice-four"></i><i class="fas fa-dice-four"></i></strong></td>
+                <td>400</td>
+              </tr>
+              <tr>
+                <td><strong><i class="fas fa-dice-five"></i><i class="fas fa-dice-five"></i><i class="fas fa-dice-five"></i></strong></td>
+                <td>500</td>
+              </tr>
+              <tr>
+                <td><strong><i class="fas fa-dice-six"></i><i class="fas fa-dice-six"></i><i class="fas fa-dice-six"></i></strong></td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td><strong><i class="fas fa-dice-one"></i><i class="fas fa-dice-two"></i><i class="fas fa-dice-three"></i><i class="fas fa-dice-four"></i><i class="fas fa-dice-five"></i><i class="fas fa-dice-six"></i></strong></td>
+                <td>3000</td>
+              </tr>
+              <tr>
+                <td><strong>3 pairs</strong></td>
+                <td>1500</td>
+              </tr>
+              <tr>
+                <td><strong>4 of a kind</strong></td>
+                <td>value x 1100</td>
+              </tr>
+              <tr>
+                <td><strong>5 of a kind</strong></td>
+                <td>value x 1300</td>
+              </tr>
+              <tr>
+                <td><strong>6 of a kind</strong></td>
+                <td>value x 1500</td>
+              </tr>
+            </table>
+          </td>
+          <td class="scores" rowspan="2">
+            <h2 id="scoretitle">scores</h2>
+            <br />
+            <table class="scorechart">
+              <tr>
+                <td id="round1">round &nbsp;1.</td>
+              </tr>
+              <tr class="every2ndRow">
+                <td id="round2">round &nbsp;2.</td>
+              </tr>
+              <tr>
+                <td id="round3">round &nbsp;3.</td>
+              </tr>
+              <tr class="every2ndRow">
+                <td id="round4">round &nbsp;4.</td>
+              </tr>
+              <tr>
+                <td id="round5">round &nbsp;5.</td>
+              </tr>
+              <tr class="every2ndRow">
+                <td id="round6">round &nbsp;6.</td>
+              </tr>
+              <tr>
+                <td id="round7">round &nbsp;7.</td>
+              </tr>
+              <tr class="every2ndRow">
+                <td id="round8">round &nbsp;8.</td>
+              </tr>
+              <tr>
+                <td id="round9">round &nbsp;9.</td>
+              </tr>
+              <tr class="every2ndRow">
+                <td id="round10">round 10.</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="howtoplay">
+            <a href="#" id="helplink">how to play</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="help" id="help">
+      <h4>HOW TO PLAY</h4><br />
+      <p>
+      At the beginning of a round, you'll roll six dice. After each roll, you're required to set aside one or more dice for scoring by clicking on the dice you'd like to set aside (you can deselect them by clicking on them again before you bank your points). You then must decide to either bank the points you've accumulated in the particular round, or try your luck and continue rolling the remaining dice. Scoring dice are counted only once, and dice set aside in a previous roll do not count toward the current roll.
+      </p>
+      <p>
+      Although you can set aside any die you like, you must have at least one scoring die in each roll, otherwise you <strong>BUST</strong>--which means the round ends, and accumulated points for that round are lost. It does not affect points accumulated in previous rounds. If you're lucky enough to score on all six dice in a roll, you've rolled <strong>HOT DICE</strong>--this means that all the points from the current and previous rolls are added to your round total, and you can continue rolling and accumulating points. However; it is possible to bust when you re-roll after rolling hot dice, thus losing all of the points for that round. 
+      </p>
+      <p>
+        Remember, the object of the game is to score 10,000 points within 10 rounds--so take care when rolling!
+      </p>
+      <p>
+        * hover your pointer over this section or the scoring key to get a closer look
+      </p>
+    </div>
+    <br />
+    <!-- main js file -->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

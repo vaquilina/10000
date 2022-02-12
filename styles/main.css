@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+/* 
+ * By Vince Aquilina
+ */
+
+/* https://www.color-hex.com/color-palette/101345 */
+
+* {
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  color: #491a06;
+}
+
+body {
+  width: 800px;
+  margin: auto;
+  background-color: #dec1af;
+}
+
+/* header */
+.header {
+	margin-left: 10px;
+}
+.header h1 {
+  font-size: 48px;
+  font-family: 'Major Mono Display', monospace;
+  color: #373946;
+  line-height: 48px;
+	margin-bottom: 20px;
+}
+
+/* dice, game area */
+.gamebox {
+  width: 100%;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.dice {
+  float: left;
+  width: 62%;
+}
+
+.dice i {
+  font-size: 80px;
+  padding-right: 10px;
+  transition-duration: 0.2s;
+}
+
+.dice i:hover {
+  text-shadow: -6px -6px #bca08d;
+  transform: scale(105%,105%);
+  cursor: pointer;
+}
+
+.dice i:active {
+  text-shadow: -4px -4px #bca08d;
+}
+
+/* buttons */
+.controls {
+  float: left;
+  margin: 0px;
+  padding: 15px;
+}
+
+.controls button {
+  margin: 2px;
+  padding: 4px;
+  width: 120px;
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 600;
+  border: 1px solid #373946;
+  border-radius: 3px;
+  background-color: #373946;
+  color: #dec1af;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+.controls button:hover {
+  background-color: #dec1af;
+  color: #000;
+}
+
+.controls button:active {
+  background-color: #6c4b68; 
+  color: #FFF;
+  transition-duration: 0.2s;
+}
+
+.controls button:disabled, button[disabled] {
+  background-color: rgba(55, 57, 70, 0.3);
+  color: rgba(1, 1, 1, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+#bank {
+  display: none;
+}
+
+/* information area */
+.infoboxes {
+  clear: both;
+}
+
+.infobox table {
+  border-style: none;
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+}
+
+/* scoring key */
+.key {
+	padding: 5px;
+	width: 200px;
+	height: 300px;
+  border-right: 1px solid #bca08d;
+  border-bottom: 2px solid #bca08d;
+  color: #852a3b;
+  background-color: #efd2bf;
+	transition-duration: 0.2s;
+}
+
+.key i {
+  font-size: 16px;
+  padding-right: 2px;
+}
+
+.key span {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.key:hover {
+	transform: scale(1.2);
+	box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #373946;
+}
+
+/* help section */
+.howtoplay, .howtoplay a {
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 18px;
+  font-weight: 800;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  color: #6c4b68;
+}
+
+.howtoplay a:hover {
+  color: #fff;
+  text-shadow: 1px 1px #111;
+}
+
+.help {
+  width: 66%;
+  border-right: 1px solid #bca08d;
+  border-bottom: 2px solid #bca08d;
+  background-color: #efd2bf;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  padding: 30px;
+  display: none;
+	transition-duration: 0.2s;
+}
+
+.help:hover {
+	transform: scale(1.2);
+	box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+.help h4 {
+  margin: 0px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.scores {
+  padding: 5px;
+  width: 550px;
+  height: 400px;
+}
+
+.scorechart {
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.scorechart td, span {
+  font-family: 'Anonymous Pro', monospace;
+}
+
+.scorechart td {
+  font-weight: 900;
+  font-size: 14px;
+  text-decoration: underline dotted rgba(0,0,0,0.2);
+  vertical-align: text-top;
+}
+
+.scorechart span {
+  display: inline-block;
+  width: 3.2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+  vertical-align: text-bottom;
+  font-weight: 100;
+}
+
+.every2ndRow {
+  background-color: #cdb09e;
+}
